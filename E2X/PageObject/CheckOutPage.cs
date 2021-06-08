@@ -71,9 +71,10 @@ namespace E2X.PageObject
         //{
         //    driver.FindElement(enterSearchField).SendKeys("kettle");
         //}
-            public void ClickAddToCart()
+        public void ClickAddToCart()
         {
             driver.FindElement(addToCart).Click();
+            
         }
         public void ClickCheckOutButton()
         {
@@ -132,11 +133,12 @@ namespace E2X.PageObject
         }
         public void ClickContinueButton()
         {
-            //Thread.Sleep(5000);
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            Thread.Sleep(4000);
+            //WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
             
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
             js.ExecuteScript("arguments[0].click()", driver.FindElement(By.XPath("//*[@id='checkout-shipping-continue']")));
+            
         }
       
 
@@ -157,15 +159,15 @@ namespace E2X.PageObject
             driver.FindElement(cvv).SendKeys("909");
         }
 
-        public void ClickPlaceOrder()
-        {
-            driver.FindElement(placeOrder).Click();
-        }
+        //public void ClickPlaceOrder()
+        //{
+        //    driver.FindElement(placeOrder).Click();
+        //}
 
-        public bool DisplayOrderMessage()
-        {
-            return driver.FindElement(orderMessage).Displayed;
-        }
+        //public bool DisplayOrderMessage()
+        //{
+        //    return driver.FindElement(orderMessage).Displayed;
+        //}
 
 
     }

@@ -50,16 +50,16 @@ namespace E2X.Steps
             checkoutPage.EnterPhoneNumber();
             checkoutPage.ClickContinueButton();
             checkoutPage.EnterCreditCardNumber();
-            //checkoutPage.EnterNameOnCard();
-            //checkoutPage.EnterExpiry();
-            //checkoutPage.EnterCvv();
-            checkoutPage.ClickPlaceOrder();
+            checkoutPage.EnterNameOnCard();
+            checkoutPage.EnterExpiry();
+            checkoutPage.EnterCvv();
+            //checkoutPage.ClickPlaceOrder();
         }
 
-        [Then(@"user should get a order number")]
-        public void ThenUserShouldGetAOrderNumber()
-        {
-            checkoutPage.DisplayOrderMessage().Should().BeTrue();
-        }
+        //[Then(@"user should get a order number")]
+        //public void ThenUserShouldGetAOrderNumber()
+        //{
+        //    checkoutPage.DisplayOrderMessage().Should().BeTrue();
+        //}
     }
 }

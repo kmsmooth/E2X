@@ -27,7 +27,7 @@ namespace E2X.Hooks
         [AfterScenario]
         public static void AfterScenario()
         {
-            //driver.Quit();
+            driver.Quit();
         }
     }
 }
